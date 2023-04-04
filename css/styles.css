@@ -1,0 +1,203 @@
+:root {
+--main-font: 'Roboto', sans-serif;
+--secondary-font: 'Raleway', sans-serif;
+
+--accent-color:#2196F3;
+--main-text-color: #757575;
+--secondary-text-color: #212121;
+--primary-white-color: #FFFFFF;
+--primary-black-color: #000000;
+--primary-bg-color: #2F303A;
+--secondary-bg-color:#F5F4FA;
+--contact-color:#ffffff99;
+}
+
+body {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    background-color: var(--primary-white-color);
+}
+.list {
+    list-style: none;
+}
+.link {
+    text-decoration: none;
+}
+.address {
+    font-style: normal;
+}
+
+/* ===== HEADER ===== */
+.navigation-list-link {
+   font-weight: 500;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   color:var(--secondary-text-color);
+}
+
+.contact-list-link {
+   font-weight: 500;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   color: currentColor;
+}
+
+.navigation-list-link:hover, .navigation-list-link:focus,
+.contact-list-link:hover, .contact-list-link:focus, .current-link {
+     color: var(--accent-color);
+}
+/* ===== END HEADER ===== */
+
+/* ===== COMPONENTS ===== */
+.logo {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+.page-header .logo {
+    color: var(--primary-black-color);
+}
+.page-footer .logo {
+ color: var(--primary-white-color);   
+}
+.logo-accent, .logo:hover, .logo:focus {
+    color: var(--accent-color);
+}
+.btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-bg-color);
+}
+.section-title {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+.address-link {
+    color: var(--primary-white-color);
+}
+.contact-link {
+    color: var(--contact-color);
+}
+.address-link:hover, .address-link:focus, 
+.contact-link:hover, .contact-link:focus {
+    color: var(--accent-color);
+}
+/* ===== END COMPONENTS ===== */
+
+/* ===== HERO ===== */
+.hero {
+    background-color: var(--primary-bg-color);
+}
+.hero-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+
+}
+.modal-btn {
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+
+}
+/* ===== END HERO ===== */
+
+/* ===== ADVANTAGES ===== */
+.advantages-list-name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+
+/* ===== END ADVANTAGES ===== */
+
+/* ===== SERVICES ===== */
+
+/* ===== END SERVICES ===== */
+
+
+/* ===== TEAM ===== */
+.team {
+    background-color: var(--secondary-bg-color);
+}
+.team-list-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: #212121;
+}
+.team-list-position {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+/* ===== END TEAM ===== */
+
+/* ===== FOOTER ===== */
+.page-footer {
+    background-color: var(--primary-bg-color);
+}
+
+
+/* ===== END FOOTER ===== */
+
+/* ===== PORTFOLIO PAGE ===== */
+.filter-list-btn:hover, .filter-list-btn:focus, .btn-current {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+}
+
+.gallery-list-name {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;    
+    color: var(--secondary-text-color);
+}
+.gallery-list-category {
+    font-size: 16px;
+    line-height: 1.88;
+    color: var(--main-text-color);
+}
+/* ===== END PORTFOLIO PAGE===== */
+
+/* ===== CONTACT PAGE ===== */
+.contact {
+     background-color: var(--secondary-bg-color);
+     text-align: center;
+}
+.contact-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+.contact .link {
+    color: var(--secondary-text-color);
+}
+.contact .link:hover, .contact .link:focus {
+    color: var(--accent-color);
+}
+/* ===== END CONTACT PAGE ===== */
