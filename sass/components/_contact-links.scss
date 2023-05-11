@@ -1,0 +1,115 @@
+// contact-list
+.contact-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.contact-list__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contact-list__link {
+    display: flex;
+    align-items: center;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: currentColor;
+
+    transition: color 250ms var(--timing-function);
+}
+
+.contact-list__link:hover,
+.contact-list__link:focus {
+    color: var(--accent-color);
+}
+
+.contact-list__svg {
+    margin-right: 10px;
+
+    transition: fill 250ms var(--timing-function);
+}
+
+.contact-list__link:hover .contact-list__svg,
+.contact-list__link:focus .contact-list__svg {
+    fill: var(--accent-color);
+}
+.contact-link {
+    color: var(--contact-color);
+
+    transition: color 250ms var(--timing-function);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--accent-color);
+}
+// social-list
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.social-list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    /* background-color: var(--primary-white-color) */
+
+    transition: background-color 250ms var(--timing-function);
+}
+
+.social-list__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-list__svg {
+    fill: var(--svg-color);
+
+    transition: fill 250ms var(--timing-function);
+}
+
+.social-list__link:hover .social-list__svg,
+.social-list__link:focus .social-list__svg {
+    fill: var(--primary-white-color);
+}
+
+.social-list__link:hover,
+.social-list__link:focus {
+    background-color: var(--accent-color);
+}
+.page-footer .social-list__svg {
+    fill: var(--primary-white-color);
+}
+
+.page-footer .social-list-link {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms var(--timing-function);
+}
+
+.page-footer .social-list__link:hover,
+.page-footer .social-list__link:focus {
+    background-color: var(--accent-color);
+}
+// address-list
+.address-list__item:not(:last-child) {
+    margin-bottom: 5px;
+}
+.address-link {
+    color: var(--primary-white-color);
+
+    transition: color 250ms var(--timing-function);
+}
+.address-link:hover,
+.address-link:focus {
+    color: var(--accent-color);
+}

@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--main-font);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    background-color: var(--primary-white-color);
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.address {
+    font-style: normal;
+}
+
+button {
+    font-family: var(--main-font);
+    font-style: normal;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.section--notoppadding {
+    padding-top: 0px;
+}
+.section__title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--secondary-text-color);
+}

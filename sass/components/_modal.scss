@@ -1,0 +1,199 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transition: all 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition: all 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary-white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    transition: border-color 250ms var(--timing-function);
+}
+
+.modal__close-btn:hover,
+.modal__close-btn:focus {
+    border-color: var(--accent-color)
+}
+
+.modal__close-svg {
+    transition: fill 250ms var(--timing-function);
+}
+
+.modal__close-btn:hover .modal__close-svg,
+.modal__close-btn:focus .modal__close-svg {
+    fill: var(--accent-color)
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form__title {
+    margin-bottom: 12px;
+
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+.modal-form__field {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: var(--main-text-color);
+}
+
+.modal-form__field:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.modal-form__input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 4px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: border-color 250ms var(--timing-function);
+}
+
+.modal-form__wrapper {
+    position: relative;
+    display: block;
+}
+
+.modal-form__svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    transition: fill 250ms var(--timing-function);
+}
+
+.modal-form__comment {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    height: 120px;
+    resize: none;
+    margin-bottom: 20px;
+
+    transition: border-color 250ms var(--timing-function);
+}
+
+.modal-form__field:focus-within .modal-form__input,
+.modal-form__field:focus-within .modal-form__comment {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.modal-form__field:focus-within .modal-form__svg {
+    fill: var(--accent-color);
+}
+
+.modal-form__input:required:focus:valid:not(:placeholder-shown) {
+    border-color: green;
+}
+
+.modal-form__input:required:focus:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+
+.modal-form__send-btn {
+    align-self: center;
+    padding: 9px 30px;
+    min-width: 200px;
+
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.modal-form__policy-ladel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.modal-form__policy-ladel .agreement-link {
+    padding-left: 5px;
+    color: var(--accent-color);
+}
+
+.modal-form__policy-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+
+    border: 2px solid var(--primary-black-color);
+    border-radius: 2px;
+}
+
+.modal-form__policy:checked+.modal-form__policy-icon {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    background-image: url('../images/modal/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: border-box;
+    background-size: contain;
+}
