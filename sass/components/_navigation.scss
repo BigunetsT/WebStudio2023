@@ -4,6 +4,7 @@
 }
 
 .navigation-list {
+    @extend %list;
     display: flex;
 }
 
@@ -12,6 +13,8 @@
 }
 
 .navigation-list__link {
+    @extend %link;
+    
     padding-top: 32px;
     padding-bottom: 32px;
     display: block;
@@ -19,15 +22,15 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
 
-    transition: color 250ms var(--timing-function);
+    transition: color 250ms $timing-function;
 }
 
 .navigation-list__link:hover,
 .navigation-list__link:focus,
 .navigation-list__link--current {
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 .navigation-list__link {
@@ -45,5 +48,5 @@
     height: 4px;
 
     border-radius: 2px;
-    background-color: var(--accent-color);
+    background-color: $accent-color;
 }

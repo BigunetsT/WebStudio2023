@@ -1,11 +1,12 @@
 .filter-list {
+    @extend %list;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
 
 .filter-list__item {
-    transition: box-shadow 250ms var(--timing-function);
+    transition: box-shadow 250ms $timing-function;
 }
 
 .filter-list__item:hover,
@@ -18,16 +19,18 @@
 }
 
 .filter-list__btn {
+    @extend %btn;
+        
     padding: 5px 22px;
 
     border-radius: 4px;
 
-    transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+    transition: color 250ms $timing-function, background-color 250ms $timing-function;
 }
 
 .filter-list__btn:hover,
 .filter-list__btn:focus,
 .filter-list__btn--current {
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
+    color: $primary-white-color;
+    background-color: $accent-color;
 }

@@ -2,7 +2,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    background-color: var(--primary-bg-color);
+    background-color: $primary-bg-color;
 }
 
 .calling {
@@ -12,7 +12,7 @@
     font-weight: 700;
     line-height: 1.143;
     text-transform: uppercase;
-    color: var(--primary-white-color);
+    color: $primary-white-color;
 }
 
 
@@ -24,7 +24,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     background-color: transparent;
-    color: var(--primary-white-color);
+    color: $primary-white-color;
 
 }
 
@@ -36,6 +36,8 @@
 }
 
 .mailing-form__btn {
+    @extend %btn;
+
     display: inline-flex;
     align-items: center;
     padding: 9px 28px;
@@ -45,8 +47,8 @@
     line-height: 1.88;
     letter-spacing: 0.06em;
     text-align: center;
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
+    color: $primary-white-color;
+    background-color: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }

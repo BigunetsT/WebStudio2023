@@ -1,4 +1,5 @@
 .services-list {
+    @extend %list;
     display: flex;
     justify-content: space-between;
 }
@@ -20,6 +21,6 @@
     line-height: 1.143;
     text-transform: uppercase;
     text-align: center;
-    color: var(--primary-white-color);
+    color: $primary-white-color;
     background-color: rgba(47, 48, 58, 0.8);
 }

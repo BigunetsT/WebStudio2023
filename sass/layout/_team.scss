@@ -1,8 +1,9 @@
 .team {
-    background-color: var(--secondary-bg-color);
+    background-color: $secondary-bg-color;
 }
 
 .team-list {
+    @extend %list;
     display: flex;
     justify-content: space-between;
 }
@@ -12,7 +13,7 @@
     padding-bottom: 30px;
 
     text-align: center;
-    background-color: var(--primary-white-color)
+    background-color: $primary-white-color;
 }
 
 .team-list__item {

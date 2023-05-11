@@ -4,12 +4,13 @@
 @import './base/common';
 @import './base/container';
 
+@import './utils/placeholders';
+
 @import './components/logo';
-@import './components/btn';
 @import './components/contact-links';
 @import './components/navigation';
 @import './components/filter';
+@import './components/gallery';
 
 @import './layout/header';
-@import './layout/gallery';
 @import './layout/footer';

@@ -1,5 +1,6 @@
 // contact-list
 .contact-list {
+    @extend %list;
     display: flex;
     margin-left: auto;
 }
@@ -9,6 +10,8 @@
 }
 
 .contact-list__link {
+    @extend %link;
+
     display: flex;
     align-items: center;
 
@@ -20,41 +23,35 @@
     letter-spacing: 0.02em;
     color: currentColor;
 
-    transition: color 250ms var(--timing-function);
+    transition: color 250ms $timing-function;
 }
 
 .contact-list__link:hover,
 .contact-list__link:focus {
-    color: var(--accent-color);
+    color: $accent-color;
 }
 
 .contact-list__svg {
     margin-right: 10px;
 
-    transition: fill 250ms var(--timing-function);
+    transition: fill 250ms $timing-function;
 }
 
 .contact-list__link:hover .contact-list__svg,
 .contact-list__link:focus .contact-list__svg {
-    fill: var(--accent-color);
-}
-.contact-link {
-    color: var(--contact-color);
-
-    transition: color 250ms var(--timing-function);
+    fill: $accent-color;
 }
 
-.contact-link:hover,
-.contact-link:focus {
-    color: var(--accent-color);
-}
 // social-list
 .social-list {
+    @extend %list;
     display: flex;
     justify-content: center;
 }
 
 .social-list__link {
+    @extend %link;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,9 +59,9 @@
     height: 44px;
 
     border-radius: 50%;
-    /* background-color: var(--primary-white-color) */
+    /* background-color: var($primary-white-color) */
 
-    transition: background-color 250ms var(--timing-function);
+    transition: background-color 250ms $timing-function;
 }
 
 .social-list__item:not(:last-child) {
@@ -72,44 +69,58 @@
 }
 
 .social-list__svg {
-    fill: var(--svg-color);
+    fill: $svg-color;
 
-    transition: fill 250ms var(--timing-function);
+    transition: fill 250ms $timing-function;
 }
 
 .social-list__link:hover .social-list__svg,
 .social-list__link:focus .social-list__svg {
-    fill: var(--primary-white-color);
+    fill: $primary-white-color;
 }
 
 .social-list__link:hover,
 .social-list__link:focus {
-    background-color: var(--accent-color);
+    background-color: $accent-color;
 }
 .page-footer .social-list__svg {
-    fill: var(--primary-white-color);
+    fill: $primary-white-color;
 }
 
 .page-footer .social-list-link {
     background-color: rgba(255, 255, 255, 0.1);
 
-    transition: background-color 250ms var(--timing-function);
+    transition: background-color 250ms $timing-function;
 }
 
 .page-footer .social-list__link:hover,
 .page-footer .social-list__link:focus {
-    background-color: var(--accent-color);
+    background-color: $accent-color;
 }
 // address-list
+.address-list {
+    @extend %list;
+}
+.address-list__link {
+    @extend %link;
+}
 .address-list__item:not(:last-child) {
     margin-bottom: 5px;
 }
-.address-link {
-    color: var(--primary-white-color);
+.address-list__link--white {
+    color: $primary-white-color;
 
-    transition: color 250ms var(--timing-function);
+    transition: color 250ms $timing-function;
 }
-.address-link:hover,
-.address-link:focus {
-    color: var(--accent-color);
+
+.address-list__link--grey {
+    color: $contact-color;
+
+    transition: color 250ms $timing-function;
+}
+.address-list__link--white:hover,
+.address-list__link--white:focus,
+.address-list__link--grey:hover,
+.address-list__link--grey:focus {
+    color: $accent-color;
 }

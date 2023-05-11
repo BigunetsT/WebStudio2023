@@ -1,19 +1,23 @@
-:root {
-    --main-font: 'Roboto', sans-serif;
-    --secondary-font: 'Raleway', sans-serif;
+    $main-font: 'Roboto', sans-serif;
+    $secondary-font: 'Raleway', sans-serif;
 
-    --accent-color: #2196F3;
-    --main-text-color: #757575;
-    --secondary-text-color: #212121;
-    --primary-white-color: #FFFFFF;
-    --primary-black-color: #000000;
-    --primary-bg-color: #2F303A;
-    --secondary-bg-color: #F5F4FA;
-    --hero-bg-color: #C4C4C4;
-    --contact-color: #ffffff99;
-    --primary-border-color: #ECECEC;
-    --secondary-border-color: #EEEEEE;
-    --svg-color: #AFB1B8;
+    $accent-color: #2196F3;
 
-    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    $main-text-color: #757575;
+    $secondary-text-color: #212121;
+
+    $primary-white-color: #FFFFFF;
+    $primary-black-color: #000000;
+
+    $primary-bg-color: #2F303A;
+    $secondary-bg-color: #F5F4FA;
+    $hero-bg-color: #C4C4C4;
+
+    $contact-color: #ffffff99;
+
+    $primary-border-color: #ECECEC;
+    $secondary-border-color: #EEEEEE;
+    
+    $svg-color: #AFB1B8;
+
+    $timing-function: cubic-bezier(0.4, 0, 0.2, 1);

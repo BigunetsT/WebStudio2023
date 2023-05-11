@@ -6,21 +6,13 @@
 }
 
 body {
-    font-family: var(--main-font);
+    font-family: $main-font;
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--main-text-color);
-    background-color: var(--primary-white-color);
-}
-
-.list {
-    list-style: none;
-}
-
-.link {
-    text-decoration: none;
+    color: $main-text-color;
+    background-color: $primary-white-color;
 }
 
 .address {
@@ -28,7 +20,7 @@ body {
 }
 
 button {
-    font-family: var(--main-font);
+    font-family: $main-font;
     font-style: normal;
     cursor: pointer;
 }
@@ -49,5 +41,5 @@ img {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
 }
