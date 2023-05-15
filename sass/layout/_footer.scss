@@ -15,49 +15,48 @@
     color: $primary-white-color;
 }
 
+.mailing-form {
+    &__input {
+        width: 358px;
+        height: 50px;
+        padding: 15px 16px;
+        margin-right: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        background-color: transparent;
+        color: $primary-white-color;
 
-.mailing-form__input {
-    width: 358px;
-    height: 50px;
-    padding: 15px 16px;
-    margin-right: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background-color: transparent;
-    color: $primary-white-color;
+        &::placeholder {
+                font-size: 16px;
+                line-height: 1.25;
+                letter-spacing: 0.03em;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    &__btn {
+        @extend %btn;
 
-}
+        display: inline-flex;
+        align-items: center;
+        padding: 9px 28px;
+        min-width: 200px;
 
-.mailing-form__input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.mailing-form__btn {
-    @extend %btn;
-
-    display: inline-flex;
-    align-items: center;
-    padding: 9px 28px;
-    min-width: 200px;
-
-    font-weight: 700;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    text-align: center;
-    color: $primary-white-color;
-    background-color: $accent-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-}
-
-.mailing-form__btn::after {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-    background-image: url('../images/footer/send.svg');
+        font-weight: 700;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: $primary-white-color;
+        background-color: $accent-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+            background-image: url('../images/footer/send.svg');
+        }
+    }
 }

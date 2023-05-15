@@ -2,6 +2,22 @@
     padding-top: 200px;
     /* padding-bottom: 200px; */
     text-align: center;
+
+    &__title {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        width: 696px;
+
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $primary-white-color;
+
+    }
 }
 
 .overlay {
@@ -19,21 +35,6 @@
     background-color: $hero-bg-color;
 }
 
-.hero__title {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    width: 696px;
-
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $primary-white-color;
-
-}
 
 .modal-open-btn {
     @extend %btn;

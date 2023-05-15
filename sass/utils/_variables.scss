@@ -1,5 +1,9 @@
+    // fonts
+    
     $main-font: 'Roboto', sans-serif;
     $secondary-font: 'Raleway', sans-serif;
+
+    // colors
 
     $accent-color: #2196F3;
 
@@ -20,4 +24,10 @@
     
     $svg-color: #AFB1B8;
 
+    // timing-function
+
     $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    // for advantages section (for generate ::before)
+
+    $urlPathOfNames: 'antenna', 'clock', 'diagram', 'astronaut';

@@ -3,124 +3,140 @@
     @extend %list;
     display: flex;
     margin-left: auto;
+
+    &__item {
+        &:not(:last-child) {
+                margin-right: 50px;
+            }
+    }
+
+    &__link {
+        @extend %link;
+    
+        display: flex;
+        align-items: center;
+    
+        padding-top: 32px;
+        padding-bottom: 32px;
+    
+        font-weight: 500;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: currentColor;
+    
+        transition: color 250ms $timing-function;
+
+        &:hover,
+        &:focus {
+                color: $accent-color;
+            }
+        }
+
+    
+    &__svg {
+        margin-right: 10px;
+
+        transition: fill 250ms $timing-function;
+
+        .contact-list__link:hover &,
+        .contact-list__link:focus & {
+                fill: $accent-color;
+            }
+}
 }
 
-.contact-list__item:not(:last-child) {
-    margin-right: 50px;
-}
-
-.contact-list__link {
-    @extend %link;
-
-    display: flex;
-    align-items: center;
-
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: currentColor;
-
-    transition: color 250ms $timing-function;
-}
-
-.contact-list__link:hover,
-.contact-list__link:focus {
-    color: $accent-color;
-}
-
-.contact-list__svg {
-    margin-right: 10px;
-
-    transition: fill 250ms $timing-function;
-}
-
-.contact-list__link:hover .contact-list__svg,
-.contact-list__link:focus .contact-list__svg {
-    fill: $accent-color;
-}
 
 // social-list
 .social-list {
     @extend %list;
     display: flex;
     justify-content: center;
-}
 
-.social-list__link {
-    @extend %link;
+    &__link {
+        @extend %link;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
 
-    border-radius: 50%;
-    /* background-color: var($primary-white-color) */
+        border-radius: 50%;
+  
+        transition: background-color 250ms $timing-function;
 
-    transition: background-color 250ms $timing-function;
-}
+        &:hover,
+        &:focus {
+                background-color: $accent-color;
 
-.social-list__item:not(:last-child) {
-    margin-right: 10px;
-}
+                .page-footer &,
+                .page-footer & {
+                        background-color: $accent-color;
+                    }
+            }
 
-.social-list__svg {
+        .page-footer & {
+                background-color: rgba(255, 255, 255, 0.1);
+        
+                transition: background-color 250ms $timing-function;
+                }
+    }
+
+    &__item {
+        &:not(:last-child) {
+                margin-right: 10px;
+            }
+    }
+
+    &__svg {
     fill: $svg-color;
 
     transition: fill 250ms $timing-function;
+
+        .social-list__link:hover &,
+        .social-list__link:focus & {
+            fill: $primary-white-color;
+        }
+
+        .page-footer & {
+            fill: $primary-white-color;
+        }
+    }
 }
 
-.social-list__link:hover .social-list__svg,
-.social-list__link:focus .social-list__svg {
-    fill: $primary-white-color;
-}
 
-.social-list__link:hover,
-.social-list__link:focus {
-    background-color: $accent-color;
-}
-.page-footer .social-list__svg {
-    fill: $primary-white-color;
-}
-
-.page-footer .social-list-link {
-    background-color: rgba(255, 255, 255, 0.1);
-
-    transition: background-color 250ms $timing-function;
-}
-
-.page-footer .social-list__link:hover,
-.page-footer .social-list__link:focus {
-    background-color: $accent-color;
-}
 // address-list
 .address-list {
     @extend %list;
-}
-.address-list__link {
-    @extend %link;
-}
-.address-list__item:not(:last-child) {
-    margin-bottom: 5px;
-}
-.address-list__link--white {
-    color: $primary-white-color;
 
-    transition: color 250ms $timing-function;
-}
+    &__item {
+        &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+    }
 
-.address-list__link--grey {
-    color: $contact-color;
+    &__link {
+        @extend %link;
 
-    transition: color 250ms $timing-function;
-}
-.address-list__link--white:hover,
-.address-list__link--white:focus,
-.address-list__link--grey:hover,
-.address-list__link--grey:focus {
-    color: $accent-color;
+        &--white {
+            color: $primary-white-color;
+    
+            transition: color 250ms $timing-function;
+
+            &:hover,
+            &:focus {
+                    color: $accent-color;
+                }
+        }
+        &--grey {
+            color: $contact-color;
+    
+            transition: color 250ms $timing-function;
+
+            &:hover,
+            &:focus {
+                color: $accent-color;
+            }
+        }
+    }
 }

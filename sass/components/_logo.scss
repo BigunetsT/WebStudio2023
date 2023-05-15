@@ -10,6 +10,12 @@
 
     transition: color 250ms $timing-function;
 
+    &--accent,
+    &:hover,
+    &:focus {
+    color: $accent-color;
+}
+
 }
 
 .page-header__logo {
@@ -28,8 +34,3 @@
     color: $primary-white-color;
 }
 
-.logo--accent,
-.logo:hover,
-.logo:focus {
-    color: $accent-color;
-}

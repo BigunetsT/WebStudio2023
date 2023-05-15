@@ -1,0 +1,7 @@
+@mixin generateBeforeUrl ($urlList){
+    @each $urlName in $urlList {
+        .advantages-list__item--icon-#{$urlName}::before {
+            background-image: url('../images/advantages/#{$urlName}.svg');
+        }
+    }
+}

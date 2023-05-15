@@ -31,15 +31,18 @@ img {
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
-}
-.section--notoppadding {
-    padding-top: 0px;
-}
-.section__title {
-    margin-bottom: 50px;
 
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    color: $secondary-text-color;
+    &--notoppadding {
+            padding-top: 0px;
+        }
+
+    &__title {
+            margin-bottom: 50px;
+        
+            font-size: 36px;
+            line-height: 1.17;
+            text-align: center;
+            color: $secondary-text-color;
+        }
 }
+
