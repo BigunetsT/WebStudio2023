@@ -1,11 +1,10 @@
 @import './utils/variables';
 @import './utils/visually-hidden';
 @import './utils/mixins';
+@import './utils/placeholders';
 
 @import './base/common';
 @import './base/container';
-
-@import './utils/placeholders';
 
 @import './components/logo';
 @import './components/contact-links';

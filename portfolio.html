@@ -16,7 +16,71 @@
     <!-- HEADER -->
     <header class="page-header">
     <div class="container page-header__container">
-        <nav class="navigation">
+        <a class="logo page-header__logo animate__pulse" href="./index.html" aria-label="Логотип ВебСтудии"><span
+                class="logo--accent">Web</span>Studio</a>
+        <button type="button" class="menu-btn menu-btn--open" data-menu-open>
+            <svg width="24" height="18" aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+        </button>
+        <div class="menu-container">
+            <button type="button" class="menu-btn menu-btn--close" data-menu-close>
+                <svg width="24" height="18" aria-label="Переключатель мобильного меню">
+                    <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+                </svg>
+            </button>
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-list__item">
+                        <a class="navigation-list__link" href="./index.html">Студия</a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a class="navigation-list__link navigation-list__link--current" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="navigation-list__item">
+                        <a class="navigation-list__link" href="">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="contact-list">
+                <li class="contact-list__item">
+                    <a class="contact-list__link contact-list__link--tel" href="tel:+380961111111">
+                        <svg class="contact-list__svg" width="10" height="16">
+                            <use href="./images/sprite.svg#icon-smartphone"></use>
+                        </svg>+38 096 111 11 11</a>
+                </li>
+                <li class="contact-list__item">
+                    <a class="contact-list__link contact-list__link--mail" href="mailto:info@devstudio.com">
+                        <svg class="contact-list__svg" width="16" height="12">
+                            <use href="./images/sprite.svg#icon-envelope"></use>
+                        </svg>
+                        <span>info@devstudio.com</span></a>
+                </li>
+            </ul>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="">
+                        Instagram
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="">
+                        Twitter
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="">
+                        Facebook
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- <nav class="navigation">
             <a class="logo page-header__logo animate__pulse" href="./index.html" aria-label="Логотип ВебСтудии"><span
                     class="logo--accent">Web</span>Studio</a>
             <ul class="navigation-list list">
@@ -42,7 +106,7 @@
                         <use href="./images/sprite.svg#icon-smartphone"></use>
                     </svg>+38 096 111 11 11</a>
             </li>
-        </ul>
+        </ul> -->
     </div>
     </header>
     <main>
@@ -72,7 +136,21 @@
                 <li class="gallery-list__item">
                     <a class="gallery-list__link" href="">
                         <div class="gallery-list__thumb">
-                            <img class="gallery-list__img" src="./images/gallery/img-1.jpg" alt="Сайт компании Технокряк" width="370" height="294">
+                            <picture>
+                                <source srcset="../images//gallery/img-1-desctop.webp 1x, ../images//gallery/img-1-desctop@2x.webp 2x"
+                                    media="(min-width:1200px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-1-desctop.jpg 1x, ../images//gallery/img-1-desctop@2x.jpg 2x"
+                                    media="(min-width:1200px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-1-tablet.webp 1x, ../images//gallery/img-1-tablet@2x.webp 2x"
+                                    media="(min-width:768px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-1-tablet.jpg 1x, ../images//gallery/img-1-tablet@2x.jpg 2x" media="(min-width:768px)"
+                                    type="image/jpeg" />
+                                <source srcset="../images//gallery/img-1-mobile.webp 1x, ../images//gallery/img-1-mobile@2x.webp 2x"
+                                    media="(min-width:320px)" type="image/webp" />
+                                <source srcset="../images/gallery/img-1-mobile.jpg 1x, ../images//gallery/img-1-mobile@2x.jpg 2x" media="(min-width:320px)"
+                                    type="image/jpeg" />
+                                <img class="gallery-list__img" src="../images/gallery/img-1-mobile.jpg" alt="Сайт компании Технокряк" />
+                            </picture>
                             <p class="gallery-list__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                        <div class="gallery-list__contect">
@@ -84,8 +162,21 @@
                 <li class="gallery-list__item">
                     <a class="gallery-list__link" href="">
                         <div class="gallery-list__thumb">
-                            <img class="gallery-list__img" src="./images/gallery/img-2.jpg" alt="Постер баскетбольной команды" width="370"
-                                height="294">
+                            <picture>
+                                <source srcset="../images//gallery/img-2-desctop.webp 1x, ../images//gallery/img-2-desctop@2x.webp 2x"
+                                    media="(min-width:1200px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-2-desctop.jpg 1x, ../images//gallery/img-2-desctop@2x.jpg 2x"
+                                    media="(min-width:1200px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-2-tablet.webp 1x, ../images//gallery/img-2-tablet@2x.webp 2x"
+                                    media="(min-width:768px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-2-tablet.jpg 1x, ../images//gallery/img-2-tablet@2x.jpg 2x"
+                                    media="(min-width:768px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-2-mobile.webp 1x, ../images//gallery/img-2-mobile@2x.webp 2x"
+                                    media="(min-width:320px)" type="image/webp" />
+                                <source srcset="../images/gallery/img-2-mobile.jpg 1x, ../images//gallery/img-2-mobile@2x.jpg 2x"
+                                    media="(min-width:320px)" type="image/jpeg" />
+                                <img class="gallery-list__img" src="../images/gallery/img-2-mobile.jpg" alt="Постер баскетбольной команды" />
+                            </picture>
                             <p class="gallery-list__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                         <div class="gallery-list__contect">
@@ -97,7 +188,21 @@
                 <li class="gallery-list__item">
                     <a class="gallery-list__link" href="">
                         <div class="gallery-list__thumb">
-                            <img class="gallery-list__img" src="./images/gallery/img-3.jpg" alt="Логотип ресторана" width="370" height="294">
+                            <picture>
+                                <source srcset="../images//gallery/img-3-desctop.webp 1x, ../images//gallery/img-3-desctop@2x.webp 2x"
+                                    media="(min-width:1200px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-3-desctop.jpg 1x, ../images//gallery/img-3-desctop@2x.jpg 2x"
+                                    media="(min-width:1200px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-3-tablet.webp 1x, ../images//gallery/img-3-tablet@2x.webp 2x"
+                                    media="(min-width:768px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-3-tablet.jpg 1x, ../images//gallery/img-3-tablet@2x.jpg 2x"
+                                    media="(min-width:768px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-3-mobile.webp 1x, ../images//gallery/img-3-mobile@2x.webp 2x"
+                                    media="(min-width:320px)" type="image/webp" />
+                                <source srcset="../images/gallery/img-3-mobile.jpg 1x, ../images//gallery/img-3-mobile@2x.jpg 2x"
+                                    media="(min-width:320px)" type="image/jpeg" />
+                                <img class="gallery-list__img" src="../images/gallery/img-3-mobile.jpg" alt="Логотип ресторана" />
+                            </picture>
                             <p class="gallery-list__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                         <div class="gallery-list__contect">
@@ -109,7 +214,21 @@
                 <li class="gallery-list__item">
                     <a class="gallery-list__link" href="">
                         <div class="gallery-list__thumb">
-                            <img class="gallery-list__img" src="./images/gallery/img-4.jpg" alt="Наушники" width="370" height="294">
+                            <picture>
+                                <source srcset="../images//gallery/img-4-desctop.webp 1x, ../images//gallery/img-4-desctop@2x.webp 2x"
+                                    media="(min-width:1200px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-4-desctop.jpg 1x, ../images//gallery/img-4-desctop@2x.jpg 2x"
+                                    media="(min-width:1200px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-4-tablet.webp 1x, ../images//gallery/img-4-tablet@2x.webp 2x"
+                                    media="(min-width:768px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-4-tablet.jpg 1x, ../images//gallery/img-4-tablet@2x.jpg 2x"
+                                    media="(min-width:768px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-4-mobile.webp 1x, ../images//gallery/img-4-mobile@2x.webp 2x"
+                                    media="(min-width:320px)" type="image/webp" />
+                                <source srcset="../images/gallery/img-4-mobile.jpg 1x, ../images//gallery/img-4-mobile@2x.jpg 2x"
+                                    media="(min-width:320px)" type="image/jpeg" />
+                                <img class="gallery-list__img" src="../images/gallery/img-4-mobile.jpg" alt="Наушники" />
+                            </picture>
                             <p class="gallery-list__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                         <div class="gallery-list__contect">
@@ -121,7 +240,21 @@
                 <li class="gallery-list__item">
                     <a class="gallery-list__link" href="">
                         <div class="gallery-list__thumb">
-                            <img class="gallery-list__img" src="./images/gallery/img-5.jpg" alt="Две коробки" width="370" height="294">
+                            <picture>
+                                <source srcset="../images//gallery/img-5-desctop.webp 1x, ../images//gallery/img-5-desctop@2x.webp 2x"
+                                    media="(min-width:1200px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-5-desctop.jpg 1x, ../images//gallery/img-5-desctop@2x.jpg 2x"
+                                    media="(min-width:1200px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-5-tablet.webp 1x, ../images//gallery/img-5-tablet@2x.webp 2x"
+                                    media="(min-width:768px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-5-tablet.jpg 1x, ../images//gallery/img-5-tablet@2x.jpg 2x"
+                                    media="(min-width:768px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-5-mobile.webp 1x, ../images//gallery/img-5-mobile@2x.webp 2x"
+                                    media="(min-width:320px)" type="image/webp" />
+                                <source srcset="../images/gallery/img-5-mobile.jpg 1x, ../images//gallery/img-5-mobile@2x.jpg 2x"
+                                    media="(min-width:320px)" type="image/jpeg" />
+                                <img class="gallery-list__img" src="../images/gallery/img-5-mobile.jpg" alt="Две коробки" />
+                            </picture>
                             <p class="gallery-list__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                         <div class="gallery-list__contect">
@@ -133,7 +266,21 @@
                 <li class="gallery-list__item">
                     <a class="gallery-list__link" href="">
                         <div class="gallery-list__thumb">
-                            <img class="gallery-list__img" src="./images/gallery/img-6.jpg" alt="Веб-сайт" width="370" height="294">
+                            <picture>
+                                <source srcset="../images//gallery/img-6-desctop.webp 1x, ../images//gallery/img-6-desctop@2x.webp 2x"
+                                    media="(min-width:1200px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-6-desctop.jpg 1x, ../images//gallery/img-6-desctop@2x.jpg 2x"
+                                    media="(min-width:1200px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-6-tablet.webp 1x, ../images//gallery/img-6-tablet@2x.webp 2x"
+                                    media="(min-width:768px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-6-tablet.jpg 1x, ../images//gallery/img-6-tablet@2x.jpg 2x"
+                                    media="(min-width:768px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-6-mobile.webp 1x, ../images//gallery/img-6-mobile@2x.webp 2x"
+                                    media="(min-width:320px)" type="image/webp" />
+                                <source srcset="../images/gallery/img-6-mobile.jpg 1x, ../images//gallery/img-6-mobile@2x.jpg 2x"
+                                    media="(min-width:320px)" type="image/jpeg" />
+                                <img class="gallery-list__img" src="../images/gallery/img-6-mobile.jpg" alt="Веб-сайт" />
+                            </picture>
                             <p class="gallery-list__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                         <div class="gallery-list__contect">
@@ -145,7 +292,21 @@
                 <li class="gallery-list__item">
                     <a class="gallery-list__link" href="">
                         <div class="gallery-list__thumb">
-                            <img class="gallery-list__img" src="./images/gallery/img-7.jpg" alt="Журнал" width="370" height="294">
+                            <picture>
+                                <source srcset="../images//gallery/img-7-desctop.webp 1x, ../images//gallery/img-7-desctop@2x.webp 2x"
+                                    media="(min-width:1200px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-7-desctop.jpg 1x, ../images//gallery/img-7-desctop@2x.jpg 2x"
+                                    media="(min-width:1200px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-7-tablet.webp 1x, ../images//gallery/img-7-tablet@2x.webp 2x"
+                                    media="(min-width:768px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-7-tablet.jpg 1x, ../images//gallery/img-7-tablet@2x.jpg 2x"
+                                    media="(min-width:768px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-7-mobile.webp 1x, ../images//gallery/img-7-mobile@2x.webp 2x"
+                                    media="(min-width:320px)" type="image/webp" />
+                                <source srcset="../images/gallery/img-7-mobile.jpg 1x, ../images//gallery/img-7-mobile@2x.jpg 2x"
+                                    media="(min-width:320px)" type="image/jpeg" />
+                                <img class="gallery-list__img" src="../images/gallery/img-7-mobile.jpg" alt="Журнал" />
+                            </picture>
                             <p class="gallery-list__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                         <div class="gallery-list__contect">
@@ -157,7 +318,21 @@
                 <li class="gallery-list__item">
                     <a class="gallery-list__link" href="">
                         <div class="gallery-list__thumb">
-                            <img class="gallery-list__img" src="./images/gallery/img-8.jpg" alt="Логотип проекта" width="370" height="294">
+                            <picture>
+                                <source srcset="../images//gallery/img-8-desctop.webp 1x, ../images//gallery/img-8-desctop@2x.webp 2x"
+                                    media="(min-width:1200px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-8-desctop.jpg 1x, ../images//gallery/img-8-desctop@2x.jpg 2x"
+                                    media="(min-width:1200px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-8-tablet.webp 1x, ../images//gallery/img-8-tablet@2x.webp 2x"
+                                    media="(min-width:768px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-8-tablet.jpg 1x, ../images//gallery/img-8-tablet@2x.jpg 2x"
+                                    media="(min-width:768px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-8-mobile.webp 1x, ../images//gallery/img-8-mobile@2x.webp 2x"
+                                    media="(min-width:320px)" type="image/webp" />
+                                <source srcset="../images/gallery/img-8-mobile.jpg 1x, ../images//gallery/img-8-mobile@2x.jpg 2x"
+                                    media="(min-width:320px)" type="image/jpeg" />
+                                <img class="gallery-list__img" src="../images/gallery/img-8-mobile.jpg" alt="Логотип проекта" />
+                            </picture>
                             <p class="gallery-list__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                         <div class="gallery-list__contect">
@@ -169,8 +344,21 @@
                 <li class="gallery-list__item">
                     <a class="gallery-list__link" href="">
                         <div class="gallery-list__thumb">
-                            <img class="gallery-list__img" src="./images/gallery/img-9.jpg" alt="Ноутбук с открытым приложением" width="370"
-                                    height="294">
+                            <picture>
+                                <source srcset="../images//gallery/img-9-desctop.webp 1x, ../images//gallery/img-9-desctop@2x.webp 2x"
+                                    media="(min-width:1200px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-9-desctop.jpg 1x, ../images//gallery/img-9-desctop@2x.jpg 2x"
+                                    media="(min-width:1200px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-9-tablet.webp 1x, ../images//gallery/img-9-tablet@2x.webp 2x"
+                                    media="(min-width:768px)" type="image/webp" />
+                                <source srcset="../images//gallery/img-9-tablet.jpg 1x, ../images//gallery/img-9-tablet@2x.jpg 2x"
+                                    media="(min-width:768px)" type="image/jpeg" />
+                                <source srcset="../images//gallery/img-9-mobile.webp 1x, ../images//gallery/img-9-mobile@2x.webp 2x"
+                                    media="(min-width:320px)" type="image/webp" />
+                                <source srcset="../images/gallery/img-9-mobile.jpg 1x, ../images//gallery/img-9-mobile@2x.jpg 2x"
+                                    media="(min-width:320px)" type="image/jpeg" />
+                                <img class="gallery-list__img" src="../images/gallery/img-9-mobile.jpg" alt="Логотип проектаНоутбук с открытым приложением" />
+                            </picture>
                             <p class="gallery-list__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
                         <div class="gallery-list__contect">
@@ -247,5 +435,10 @@
         </div>
     </div>
 </footer>
+<script src="./js/menu.js"></script>
+<script>
+    const { height: pageHeaderHeight } = document.querySelector(".page-header").getBoundingClientRect();
+    document.body.style.paddingTop = `${pageHeaderHeight}px`;
+</script>
 </body>
 </html>

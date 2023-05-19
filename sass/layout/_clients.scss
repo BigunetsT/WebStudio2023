@@ -1,20 +1,32 @@
 .clients-list {
     @extend %list;
+
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     &__item {
-        &:not(:last-child) {
-                margin-right: 30px;
+        flex-basis: calc(50% - 30px);
+        max-width: 210px;
+        height: 92px;
+
+        &:not(:nth-last-child(-n + 2)) {
+            margin-bottom: 30px;
         }
+        &:nth-child(odd) {
+            margin-right: 30px;
+        }
+        // &:not(:last-child) {
+        //         margin-right: 30px;
+        // }
     }
     &__link {
-        display: flex;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
 
-        width: 170px;
-        height: 92px;
+        width: 100%;
+        height: 100%;
 
         border: 1px solid $svg-color;
         border-radius: 5px;

@@ -29,18 +29,23 @@ img {
     display: block;
 }
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    // padding-top: 94px;
+    // padding-bottom: 94px;
 
     &--notoppadding {
             padding-top: 0px;
         }
 
     &__title {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
+            // margin-bottom: 50px;
+
+            font-size: 28px;
         
-            font-size: 36px;
-            line-height: 1.17;
+            // font-size: 36px;
+            line-height: 1.178;
             text-align: center;
             color: $secondary-text-color;
         }

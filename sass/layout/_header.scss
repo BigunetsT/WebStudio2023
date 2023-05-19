@@ -13,6 +13,49 @@
         border-bottom: none;
     }
 }
+.menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
 
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
 
+    &--close {
+        position: absolute;
+        top: 10px;
+        right: 15px; 
+    }
+
+}
+.icon-menu, .icon-cross {
+    transition: fill 250ms $timing-function;
+
+    .menu-btn:hover &,
+    .menu-btn:focus & {
+        fill: $accent-color;;
+    }
+}
+.menu-container {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+        
+    padding: 48px 40px;
+        
+    background-color: $primary-white-color;
+
+    .menu-btn.is-open + & {
+        display: block;
+    }
+
+}
