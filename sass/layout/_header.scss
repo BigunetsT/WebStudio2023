@@ -43,19 +43,31 @@
     }
 }
 .menu-container {
-    display: none;
+   @media screen and (max-width: calc($tablet - 1px)) {
+        display: none;
+         
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    
+        padding: 48px 40px;
+    
+        background-color: $primary-white-color;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-        
-    padding: 48px 40px;
-        
-    background-color: $primary-white-color;
+        .menu-btn.is-open + & {
+                display: block;
+            }
+   }
 
-    .menu-btn.is-open + & {
-        display: block;
+    @media screen and (min-width: $tablet)  {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: $desctop)  {
+        justify-content: space-between;
+        flex-grow: 1;
     }
 
 }

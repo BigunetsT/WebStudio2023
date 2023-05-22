@@ -14,15 +14,24 @@
     &:hover,
     &:focus {
     color: $accent-color;
-}
+    }   
+    @media screen and (min-width: $desctop) {
+        font-size: 26px;
+        line-height: 1.192;
+    }
 
 }
 
 .page-header__logo {
     padding-top: 16px;
     padding-bottom: 16px;
-    // padding-top: 24px;
-    // padding-bottom: 25px;
+
+    @media screen and (min-width: $desctop) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+        margin-right: 93px;
+    }
+
 
     color: $primary-black-color;
 

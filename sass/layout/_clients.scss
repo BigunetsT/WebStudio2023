@@ -6,19 +6,34 @@
     justify-content: space-between;
 
     &__item {
-        flex-basis: calc(50% - 30px);
-        max-width: 210px;
         height: 92px;
 
-        &:not(:nth-last-child(-n + 2)) {
-            margin-bottom: 30px;
-        }
-        &:nth-child(odd) {
+        @media screen and (max-width: calc($tablet - 1px)) {
+            flex-basis: calc(50% - 30px);
+            max-width: 210px;
+
+            &:not(:nth-last-child(-n + 2)) {
+                 margin-bottom: 30px;
+             }
+
+            &:nth-child(odd) {
             margin-right: 30px;
+            }
         }
-        // &:not(:last-child) {
-        //         margin-right: 30px;
-        // }
+        @media screen and (min-width: $tablet) and (max-width: calc($desctop - 1px)) {
+            width: 226px;
+
+            &:not(:nth-last-child(-n + 3)) {
+                    margin-bottom: 30px;
+                }
+        }
+        @media screen and (min-width: $desctop) {
+            width: 170px;
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                    }
+        }
     }
     &__link {
         display: inline-flex;

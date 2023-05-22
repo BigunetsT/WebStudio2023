@@ -10,6 +10,9 @@
     @media screen and (min-width: $tablet) {
             width: 768px;
         }
+    @media screen and (min-width: $desctop) {
+            width: 1200px;
+        }
 }
 
 .page-header__container {
@@ -17,7 +20,10 @@
     align-items: center;
     justify-content: space-between;
 }
-// .page-footer__container {
-//     display: flex;
-//     justify-content: space-between;
-// }
+.page-footer__container {
+    @media screen and (min-width: $desctop) {
+        display: flex;
+        justify-content: space-between;
+    }
+   
+}

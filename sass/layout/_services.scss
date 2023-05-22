@@ -1,32 +1,32 @@
 .services {
-    @media screen and (max-width: calc($tablet - 1px)) {
+    @media screen and (max-width: calc($desctop - 1px)) {
         display: none;
     }
 }
 
-// .services-list {
-//     @extend %list;
-//     display: flex;
-//     justify-content: space-between;
+.services-list {
+    @extend %list;
+    display: flex;
+    justify-content: space-between;
 
-//     &__item {
-//         position: relative;
-//     }
+    &__item {
+        position: relative;
+    }
 
-//     &__name {
-//         position: absolute;
-//         left: 0;
-//         bottom: 0;
+    &__name {
+        position: absolute;
+        left: 0;
+        bottom: 0;
 
-//         padding-top: 27px;
-//         padding-bottom: 27px;
-//         width: 100%;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        width: 100%;
 
-//         font-weight: 700;
-//         line-height: 1.143;
-//         text-transform: uppercase;
-//         text-align: center;
-//         color: $primary-white-color;
-//         background-color: rgba(47, 48, 58, 0.8);
-//     }
-// }
+        font-weight: 700;
+        line-height: 1.143;
+        text-transform: uppercase;
+        text-align: center;
+        color: $primary-white-color;
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+}

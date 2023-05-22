@@ -23,8 +23,6 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    // width: 528px;
-    // height: 581px;
     width: 90%;
     max-width: 450px;
     padding: 40px;
@@ -37,6 +35,11 @@
 
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0);
+    }
+    
+    @media screen and (min-width: $desctop) {
+        width: 528px;
+        height: 581px;
     }
 
     &__close-btn {

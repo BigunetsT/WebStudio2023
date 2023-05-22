@@ -1,9 +1,16 @@
 .filter-list {
     @extend %list;
+    
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
     margin-bottom: 40px;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desctop) {
+        justify-content: center;
+    }
 
     &__item {
         transition: box-shadow 250ms $timing-function;
@@ -15,11 +22,13 @@
         &:not(:last-child) {
                 margin-right: 8px;
             }
-        &:not(:nth-last-child(-n + 2)) {
-                margin-bottom: 15px;
+        @media screen and (max-width: calc($tablet - 1px)) {
+            &:not(:nth-last-child(-n + 2)) {
+                    margin-bottom: 15px;
+             }
             }
+       
     }
-
     
     &__btn {
         @extend %btn;
