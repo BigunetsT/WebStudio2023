@@ -1,6 +1,6 @@
 .navigation {
     @media screen and (max-width: calc($tablet - 1px)) {
-        margin-bottom: 300px;
+        margin-bottom: 200px;
     }
     @media screen and (min-width: $tablet) and (max-width: calc($desctop - 1px)){
         margin-right: 84px;

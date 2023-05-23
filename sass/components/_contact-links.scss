@@ -3,7 +3,7 @@
     @extend %list;
 
     @media screen and (max-width: calc($tablet - 1px)) {
-        margin-bottom: 64px;
+        margin-bottom: 20px;
     }
 
     @media screen and (min-width: $tablet) {
@@ -55,7 +55,7 @@
            
              }
             &--tel {
-            font-size: 34px;
+            font-size: 24px;
             
             color: $accent-color;
              }
@@ -138,7 +138,7 @@
         
         .menu-container & {
             font-weight: 500;
-            font-size: 18px;
+            font-size: 14px;
             line-height: 1.22;
             letter-spacing: 0.02em;
             
